@@ -22,6 +22,8 @@
 \begin{document}
 \begin{multicols*}{2}
 
+\section*{Theorems}
+
 \begin{align*}
     (a\ |\ b) \wedge (b\ |\ c) &\implies a\ |\ c \\
     (a\ |\ b) \wedge (b\ |\ a) &\implies a = \pm b \\
@@ -52,14 +54,27 @@
 \end{align*}
 
 \section*{Algorithms}
-Include a separate section that describes algorithms by giving an example of their steps.
-\begin{enumerate}
-    \item Extended Euler Algorithm
-        \begin{align*}
-            au + bv &= \gcd(a, b)
-        \end{align*}
-    \item Fast Powering
-\end{enumerate}
+
+\subsection*{Euler}
+Calculates $\gcd(a, b)$.
+\begin{align*}
+    291 &= 252(1) + 39 \\
+    252 &= 39(6)  + 18 \\
+    39  &= 18(2)  + \boxed{3} \\
+    18  &= 3(6)   + 0
+\end{align*}
+
+\subsection*{Euler Extended}
+Calculates $au + bv = \gcd(a, b)$.
+\begin{align*}
+    291(1)  + 252(0) &= 291 \\
+    291(0)  + 252(1) &= 252 \\
+    291(1)  + 252(-1) &= 39 \\
+    252(-6) + 39(7)   &= 18 \\
+    39(13)  + 18(-15) &= 3 \\
+\end{align*}
 
 \end{multicols*}
+\pagebreak
+
 \end{document}
