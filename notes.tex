@@ -1,10 +1,11 @@
 \documentclass{article}
 
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{multicol}
-\usepackage[margin=0.3in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
@@ -21,7 +22,44 @@
 \begin{document}
 \begin{multicols*}{2}
 
-\maketitle
+\begin{align*}
+    (a\ |\ b) \wedge (b\ |\ c) &\implies a\ |\ c \\
+    (a\ |\ b) \wedge (b\ |\ a) &\implies a = \pm b \\
+    (a\ |\ b) \wedge (a\ |\ c) &\implies a\ |\ (b \pm c)
+\end{align*}
+\begin{align*}
+    \frac{a}{b} \quad &\longrightarrow  \quad a = bq + r \\
+    \gcd(a, b) &= \gcd(b, r) \\
+    au + bv = 1 \quad &\implies \quad \text{$a$ and $b$ are coprime}
+\end{align*}
+\begin{align*}
+    a_1 &\equiv a_2 \pmod{m} \\
+    b_1 &\equiv b_2 \pmod{m} \\
+    &\Downarrow \\
+    a_1 \times b_1 &\equiv a_2 \times b_2 \pmod{m} \\
+    a_1 \pm b_1 &\equiv a_2 \pm b_2 \pmod{m} \\
+\end{align*}
+\begin{align*}
+    a \times b \equiv 1 \pmod{m} \quad \Leftrightarrow \quad \gcd(a, m) = 1
+\end{align*}
+\begin{align*}
+    \gcd(a&, m) = 1 \\
+    &\Downarrow \\
+    \text{$a$ has a multi} & \text{plicative inverse}
+\end{align*}
+\begin{align*}
+    \frac{\mathbb{Z}}{m\mathbb{Z}} = \curly{0, 1, \ldots, m - 1}
+\end{align*}
+
+\section*{Algorithms}
+Include a separate section that describes algorithms by giving an example of their steps.
+\begin{enumerate}
+    \item Extended Euler Algorithm
+        \begin{align*}
+            au + bv &= \gcd(a, b)
+        \end{align*}
+    \item Fast Powering
+\end{enumerate}
 
 \end{multicols*}
 \end{document}
