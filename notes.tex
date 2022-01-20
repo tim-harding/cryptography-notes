@@ -28,9 +28,9 @@
 \section*{Theorems}
 
 \begin{align*}
-    (a\ |\ b) \wedge (b\ |\ c) &\implies a\ |\ c \\
-    (a\ |\ b) \wedge (b\ |\ a) &\implies a = \pm b \\
-    (a\ |\ b) \wedge (a\ |\ c) &\implies a\ |\ (b \pm c)
+    (a \mid b) \wedge (b \mid c) &\implies a \mid c \\
+    (a \mid b) \wedge (b \mid a) &\implies a = \pm b \\
+    (a \mid b) \wedge (a \mid c) &\implies a \mid (b \pm c)
 \end{align*}
 \begin{align*}
     \frac{a}{b} \quad &\longrightarrow  \quad a = bq + r \\
@@ -58,10 +58,14 @@
     \soft{\frac{\mathbb{Z}}{m\mathbb{Z}}}^* &= \curly{1, 2, \ldots, m - 1}
 \end{align*}
 \begin{align*}
-    x \equiv 1 \pmod{m} \implies m\ |\ (x - 1) \implies xu + mv = 1
+    x \equiv 1 \pmod{m} \implies m \mid (x - 1) \implies xu + mv = 1
 \end{align*}
 \begin{align*}
     \forall a \in \soft{\frac{\mathbb{Z}}{p\mathbb{Z}}}^*, \exists a^{-1} : a \times a^{-1} \equiv 1 \pmod{p}
+\end{align*}
+\begin{align*}
+    p \nmid a \implies a^{p-1} \equiv 1 \pmod{p} \\
+    p \mid a \implies a^{p-1} \equiv 0 \pmod{p}
 \end{align*}
 
 \section*{Algorithms}
