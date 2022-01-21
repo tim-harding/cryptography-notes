@@ -97,6 +97,26 @@ Calculates $au + bv = \gcd(a, b)$.
     39(13)  + 18(-15) &= 3
 \end{align*}
 
+\subsection*{Fast powering}
+\begin{align*}
+    17^{811} \pmod{643}
+\end{align*}
+\begin{align*}
+    811_{10} = 1100101011_2
+\end{align*}
+\begin{align*}
+    17^2 &\equiv 289 \pmod{643} \\
+    289^2 &\equiv 574 \pmod{643} \\
+    574^2 &\equiv 260 \pmod{643} \\
+    & \qquad \quad \vdots
+\end{align*}
+\begin{align*}
+    17^{1} \times 289^{1} \times 574^{0} \times 260^{1} \times 85^{0} \times 152^{1} \times 599^{0} \times 7^{0} \times 49^{1} \times 472^{1}
+\end{align*}
+\begin{align*}
+    17^{811} \equiv 621 \pmod{643}
+\end{align*}
+
 \end{multicols*}
 \pagebreak
 
