@@ -79,7 +79,7 @@
 \section*{Algorithms}
 
 \subsection*{Euler}
-Calculates $\gcd(a, b)$.
+Calculate $\gcd(291, 252)$.
 \begin{align*}
     291 &= 252(1) + 39        \\
     252 &= 39(6)  + 18        \\
@@ -88,7 +88,7 @@ Calculates $\gcd(a, b)$.
 \end{align*}
 
 \subsection*{Euler Extended}
-Calculates $au + bv = \gcd(a, b)$.
+Calculate $291u + 252v = \gcd(291, 252)$.
 \begin{align*}
     291(1)  + 252(0)  &= 291 \\
     291(0)  + 252(1)  &= 252 \\
@@ -96,11 +96,12 @@ Calculates $au + bv = \gcd(a, b)$.
     252(-6) + 39(7)   &= 18  \\
     39(13)  + 18(-15) &= 3
 \end{align*}
+$(u, v) = (13, -15)$
+
+$291 \times 13 + 252 \times -15 = 3$
 
 \subsection*{Fast powering}
-\begin{align*}
-    17^{811} \pmod{643}
-\end{align*}
+Calculate $17^{811} \pmod{643}$
 \begin{align*}
     811_{10} = 1100101011_2
 \end{align*}
