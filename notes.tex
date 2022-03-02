@@ -85,11 +85,13 @@
     p \mid ja \implies p \mid j \vee p \mid a
 \end{align*}
 
-$a^{-1}$ can be computed either with the extended Euler algorith or by finding $a^{p-2}$ with the fast powering algorithm.
+$a^{-1}$ can be computed either with the extended Euclidean algorith or by finding $a^{p-2}$ with the fast powering algorithm.
+
+\end{multicols*}
 
 \section*{Algorithms}
 
-\subsection*{Euler}
+\subsection*{Euclidean}
 Calculate $\gcd(291, 252)$.
 \begin{align*}
     291 &= 252(1) + 39        \\
@@ -98,7 +100,7 @@ Calculate $\gcd(291, 252)$.
     18  &= 3(6)   + 0
 \end{align*}
 
-\subsection*{Euler Extended}
+\subsection*{Extended Euclidean}
 Calculate $291u + 252v = \gcd(291, 252)$.
 \begin{align*}
     291(1)  + 252(0)   &= 291 \\
