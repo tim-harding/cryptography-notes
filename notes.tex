@@ -131,7 +131,24 @@ Calculate $17^{811} \pmod{643}$
     17^{811} \equiv 621 \pmod{643}
 \end{align*}
 
-\end{multicols*}
-\pagebreak
+\subsection*{Pollard $p-1$ factorization}
+\begin{enumerate}
+    \item Let $a = 2$ (for example)
+    \item For $1 < i < \text{bound}$
+    \begin{enumerate}
+        \item $a = a^i$
+        \item $d = \gcd(a - 1, N)$
+        \item If $1 < d < N$, return $d$
+    \end{enumerate}
+    \item Try another $a$
+\end{enumerate}
+
+Example:
+\begin{align*}
+    & &\vdots & \\
+    2^{12!} - 1 &\equiv 6680550 \pmod{13927189} & \gcd(2^{12!} - 1, 13927189) = 1 \\
+    2^{13!} - 1 &\equiv 6161077 \pmod{13927189} & \gcd(2^{13!} - 1, 13927189) = 1 \\
+    2^{14!} - 1 &\equiv 879290  \pmod{13927189} & \gcd(2^{14!} - 1, 13927189) = 3823 \\
+\end{align*}
 
 \end{document}
