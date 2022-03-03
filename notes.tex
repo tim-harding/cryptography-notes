@@ -93,6 +93,18 @@ $a^{-1}$ can be computed either with the extended Euclidean algorith or by findi
     \pi(x) &\approx \frac{x}{\ln x}
 \end{align*}
 
+\subsection*{RSA}
+The basis of RSA is solving the hard problem
+\begin{align*}
+    x^e \equiv c \pmod{pq}
+\end{align*}
+
+Bob picks large, secret primes $p$ and $q$ and an exponent $e$. He solves for $d$ in $ed \equiv 1 \pmod{(p-1)(q-1)}$ and holds on to it. He publishes $N = pq$ and $e$.
+
+Alice encrypts a message $m$ to send to Bob by computing $c \equiv m^e \pmod{N}$.
+
+Bob decrypts the message using $m \equiv c^d \pmod{N}$.
+
 \end{multicols*}
 
 \section*{Algorithms}
