@@ -157,4 +157,29 @@ Example:
     2^{14!} - 1 &\equiv 879290  \pmod{13927189} & \gcd(2^{14!} - 1, 13927189) = 3823 \\
 \end{align*}
 
+\subsection*{Miller-Rabin}
+Testing $n$ with witness $a$:
+\begin{enumerate}
+    \item If $n$ is even or $1 < \gcd(a, n) < n$ then return composite
+    \item $n - 1 = 2^k q$ such that $q$ is odd
+    \item $a = a^q$
+    \item If $a \equiv 1 \pmod{n}$ then the test fails
+    \item for $i$ in $0...k-1$
+    \begin{enumerate}
+        \item If $a \equiv -1 \pmod{n}$ then the test fails
+        \item $a = a^2 \pmod{n}$
+    \end{enumerate}
+    \item Return composite
+\end{enumerate}
+
+Example:
+$n = 561$ and $n - 1 = 560 = 2^4 \times 35$
+\begin{align*}
+    2^{35} \equiv 263 \pmod{561} \\
+    2^{2 \times 35} \equiv 263^2 \equiv 166 \pmod{561} \\
+    2^{4 \times 35} \equiv 166^2 \equiv 67 \pmod{561} \\
+    2^{8 \times 35} \equiv 67^2 \equiv 1 \pmod{561} \\
+\end{align*}
+561 is composite.
+
 \end{document}
