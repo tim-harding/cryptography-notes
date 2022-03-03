@@ -96,9 +96,12 @@ $a^{-1}$ can be computed either with the extended Euclidean algorith or by findi
 \subsection*{RSA}
 The basis of RSA is solving the hard problem
 \begin{align*}
-    x^e \equiv c \pmod{pq}
+    x^e \equiv c \pmod{N}
 \end{align*}
 
+When $N$ is prime, then compute $de \equiv 1 \pmod{p-1}$. The difficulty comes from finding $d$ when $N = pq$ and must be factored in order to solve the congruence.
+
+\subsubsection*{Procedure}
 Bob picks large, secret primes $p$ and $q$ and an exponent $e$. He solves for $d$ in $ed \equiv 1 \pmod{(p-1)(q-1)}$ and holds on to it. He publishes $N = pq$ and $e$.
 
 Alice encrypts a message $m$ to send to Bob by computing $c \equiv m^e \pmod{N}$.
