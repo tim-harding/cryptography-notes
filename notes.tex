@@ -157,7 +157,7 @@ Calculate $17^{811} \pmod{643}$
     \item Let $a = 2$ (for example)
     \item For $1 < i < \text{bound}$
     \begin{enumerate}
-        \item $a = a^i$
+        \item Let $a \equiv a^i \pmod{N}$
         \item $d = \gcd(a - 1, N)$
         \item If $1 < d < N$, return $d$
     \end{enumerate}
