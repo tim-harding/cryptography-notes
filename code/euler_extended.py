@@ -31,8 +31,8 @@ def display_stages(stages):
             f"{stage.a}",
             f"{stage.b}({stage.q})",
             f"{stage.r}",
-            f"{stage.a}({stage.x})",
-            f"{stage.b}({stage.y})",
+            f"{stages[0].a}({stage.x})",
+            f"{stages[0].b}({stage.y})",
             f"{stage.r}",
         ]
         for i, part in enumerate(parts):
